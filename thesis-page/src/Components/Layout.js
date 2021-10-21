@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Maintext from './Maintext';
 import SecondText from './SecondText';
+import ThirdText from './ThirdText';
 
 const Layout = () => {
 
@@ -21,6 +22,7 @@ const Layout = () => {
            <Header changeMode = {changeMode} isLightMode = {lightMode}/>
            <Maintext isLightMode={lightMode}/>
            <SecondText isLightMode={lightMode} />
+           <ThirdText isLightMode={lightMode} />
            <Footer isLightMode = {lightMode}/>
         </>
     )
