@@ -8,5 +8,5 @@ const Ornaments = () => {
     return (
         ornaments
     )
-    export default Ornaments;
 }
+export default Ornaments;

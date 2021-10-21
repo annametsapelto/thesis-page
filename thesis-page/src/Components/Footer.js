@@ -4,5 +4,6 @@ const Footer = (isLightMode) => {
     return (
         <p>All rights reserved by Anna Metsäpelto 2021</p>
     )
-    export default Footer;
+
 }
+export default Footer;

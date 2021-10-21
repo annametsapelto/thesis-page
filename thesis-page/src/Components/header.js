@@ -2,10 +2,10 @@ import React from 'react';
 import dianoras from '../Images/dianoras.png';
 import seeblad from '../Images/seeblad.png';
 
-const Header = (changeMode, isLightMode) => {
+const Header = (props) => {
 
     const mode = () => {
-        if(isLightmode) {
+        if(props.isLightmode) {
             return "Dark Mode";
         } else {
             return "LightMode";
@@ -13,9 +13,9 @@ const Header = (changeMode, isLightMode) => {
     }
     return(
         <div>
-          <img src={seeblad} alt="Picture of a yellow leaf shape, a heraldic seebladt"/>
+          <img src={seeblad} alt="A yellow leaf shape, a heraldic seebladt"/>
           <img src={dianoras} alt="Decorative text saying Dianora's Page"/>
-          <p onClick={changeMode} isLightMode={isLightMode}>{mode}</p>
+          <p onClick={props.changeMode} isLightMode={props.isLightMode}>{mode}</p>
         </div>
     );
 }
