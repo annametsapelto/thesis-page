@@ -5,6 +5,7 @@ import Footer from './Footer';
 import Maintext from './Maintext';
 import SecondText from './SecondText';
 import ThirdText from './ThirdText';
+import PictureCarousel from './PictureCarousel';
 
 const Layout = () => {
 
@@ -22,6 +23,7 @@ const Layout = () => {
            <Header changeMode = {changeMode} isLightMode = {lightMode}/>
            <Maintext isLightMode={lightMode}/>
            <SecondText isLightMode={lightMode} />
+           <PictureCarousel isLightMode={lightMode} />
            <ThirdText isLightMode={lightMode} />
            <Footer isLightMode = {lightMode}/>
         </>
