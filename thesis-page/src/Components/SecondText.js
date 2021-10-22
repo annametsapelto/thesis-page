@@ -1,7 +1,10 @@
+import Ornaments from './Ornaments';
+
 const SecondText = (props) => {
     return (
         <div>
             <h3>My Reenactment Eras</h3>
+            <Ornaments isLightMode={props.isLightMode}/>
             <h5>The Viking Age (years 700-1100)</h5>
             <p>My latest period is the Viking age. Lots of misconceptions about Viking clothing and life are moving around because of entertainment industry and shows like The Vikings which are rather far from real history. So I’ve been reading about grave finds and interpretations of the clothes they wore. The Viking age was so long ago that most clothes are just fragments and definite truths are hard to find but I try to stick to the best evidence.</p>
             <h5>The Middle Ages (years 1100-1400)</h5>

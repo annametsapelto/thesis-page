@@ -15,7 +15,7 @@ const Header = (props) => {
         <div>
           <img src={seeblad} alt="A yellow leaf shape, a heraldic seebladt"/>
           <img src={dianoras} alt="Decorative text saying Dianora's Page"/>
-          <p onClick={props.changeMode} isLightMode={props.isLightMode}>{mode}</p>
+          <p onClick={props.changeMode} isLightMode={props.isLightMode}>{mode()}</p>
         </div>
     );
 }

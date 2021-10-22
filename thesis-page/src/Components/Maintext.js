@@ -1,3 +1,5 @@
+import Ornaments from "./Ornaments";
+
 const Maintext = (props) => {
   return (
       <div>
@@ -15,6 +17,7 @@ const Maintext = (props) => {
               I’ve done SCA heavy combat and own a suit of armor for it. I’ve arranged a couple of events and cooked medieval feasts for participants. 
               I’ve been dressed in fancy garb in fairs and castles. I’ve also worked on the association side as the guide to new members and 
               currently as the web master.</p>
+            <Ornaments isLightMode={props.isLightMode} />
       </div>
   )
 }

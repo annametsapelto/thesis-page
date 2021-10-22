@@ -1,12 +1,20 @@
 import darkOrnament from '../Images/celticdividerdark.png';
-import goldOrnament from '../Images/celticdeviderlight.png';
+import goldOrnament from '../Images/celticdividerlight.png';
 
-const Ornaments = () => {
-    ornaments = {
+const Ornaments = (props) => {
 
+    const ornaments = () => {
+      if (props.isLightMode) {
+          return <img src={darkOrnament} alt="Celtic divider" />
+      } else {
+          return <img src={goldOrnament} alt="Golden Celtic divider" />
+      }
     }
     return (
-        ornaments
+        <div>
+            {ornaments()}
+        </div>
+        
     )
 }
 export default Ornaments;
