@@ -1,5 +1,6 @@
 import darkOrnament from '../Images/celticdividerdark.png';
 import goldOrnament from '../Images/celticdividerlight.png';
+import '../Styles/Ornament.css'
 
 const Ornaments = (props) => {
 
@@ -11,7 +12,7 @@ const Ornaments = (props) => {
       }
     }
     return (
-        <div>
+        <div className="ornament">
             {ornaments()}
         </div>
         
