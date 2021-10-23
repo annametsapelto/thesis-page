@@ -1,8 +1,9 @@
 import Ornaments from "./Ornaments";
+import '../Styles/Maintext.css';
 
 const Maintext = (props) => {
   return (
-      <div>
+      <div className="main">
           <h1>Historical Reenactment</h1>
           <p>The goal of historical reenactment is to feel like living in some past era. Quite often we bypass some of the more gruesome 
               details like pestilence and poor hygiene even though many of us study also those less tractable facts. Historical 
