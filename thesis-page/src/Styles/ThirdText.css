@@ -1,0 +1,9 @@
+.third {
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 20%;
+    padding: 10px;
+}
+.third h3 {
+    text-align: center;
+}
