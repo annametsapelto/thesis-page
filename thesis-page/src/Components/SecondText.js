@@ -3,7 +3,7 @@ import '../Styles/SecondText.css';
 
 const SecondText = (props) => {
     return (
-        <div className="second">
+        <div className={"second " + (!props.isLightMode ? "darkSecond": "")}>
             <h3>My Reenactment Eras</h3>
             <Ornaments isLightMode={props.isLightMode}/>
             <h4>The Viking Age (years 700-1100)</h4>
