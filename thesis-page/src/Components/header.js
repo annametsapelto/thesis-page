@@ -13,7 +13,7 @@ const Header = (props) => {
         }
     }
     return(
-        <div className="header">
+        <div className={"header " + (!props.isLightMode ? "darkHeader": "")}>
           <img src={seeblad} alt="A yellow leaf shape, a heraldic seebladt" className="seeblad"/>
           <img src={dianoras} alt="Decorative text saying Dianora's Page" className="dianora"/>
           <p onClick={props.changeMode} isLightMode={props.isLightMode} className="mode">{mode()}</p>

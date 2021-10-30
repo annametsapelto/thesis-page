@@ -2,6 +2,7 @@ import {pictures} from '../Utility/CarouselData';
 import {useState} from 'react';
 import ArrowLeft from './ArrowLeft';
 import ArrowRight from './ArrowRight';
+import '../Styles/Carousel.css';
 
 const PictureCarousel = (props) => {
     const [currentImg, setCurrentImg] = useState(0);
@@ -19,7 +20,7 @@ const PictureCarousel = (props) => {
     }
 
     return (
-        <div> 
+        <div className="carousel"> 
           <ArrowLeft isLightMode={props.isLightMode} switchLeft={switchLeft}/>   
           <div>
               <img src={pictures[currentImg].img} alt={pictures[currentImg].alt} />
