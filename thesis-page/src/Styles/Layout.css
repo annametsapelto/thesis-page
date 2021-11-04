@@ -4,3 +4,17 @@
 .darkBackground {
     background-color: #1D1D1D;
 }
+.mainFlex {
+    display: flex;
+}
+@media only screen and (max-width: 700px) {
+    .mainFlex :nth-child(0) {
+        order: 2;
+    }
+    .mainFlex {
+        flex-direction: column;
+    }
+}
+.secondFlex {
+    flex-direction: column;
+}

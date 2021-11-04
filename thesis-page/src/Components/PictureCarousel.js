@@ -20,13 +20,13 @@ const PictureCarousel = (props) => {
     }
 
     return (
-        <div className="carousel"> 
-          <ArrowLeft isLightMode={props.isLightMode} switchLeft={switchLeft}/>   
+        <div className={"carousel" + (!props.isLightMode ? "darkCarousel": "")}> 
+          <ArrowLeft isLightMode={props.isLightMode} switchLeft={switchLeft} className="carouselButton"/>   
           <div>
               <img src={pictures[currentImg].img} alt={pictures[currentImg].alt} />
               <p>{pictures[currentImg].subtitle}</p>
           </div>
-          <ArrowRight isLightMode={props.isLightMode} switchRight={switchRight} />
+          <ArrowRight isLightMode={props.isLightMode} switchRight={switchRight} className="carouselButton"/>
         </div>
     )
 }

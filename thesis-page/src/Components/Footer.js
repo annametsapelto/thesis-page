@@ -1,9 +1,9 @@
 import React from 'react';
 import '../Styles/Footer.css';
 
-const Footer = (isLightMode) => {
+const Footer = (props) => {
     return (
-        <div className="footer">
+        <div className={"footer " + (!props.isLightMode ? "darkFooter": "")}>
             <p>All rights reserved by Anna Metsäpelto 2021</p>
         </div>
 

@@ -1,7 +1,10 @@
 .button {
     height: 100px;
     width: 70px;
-    background-color: #EEB414;  
+    background-color: #EEB414; 
+    cursor: pointer;
+    top: 50%;
+    margin-top: 50px;
 }
 .left {
     background-image: url(../Images/arrow-left.png);
