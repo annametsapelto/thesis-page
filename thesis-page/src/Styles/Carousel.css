@@ -1,0 +1,39 @@
+.carousel {
+    display: flex;
+    align-items:center;
+    margin-left: 40px;
+}
+.carousel img {
+    width: 600px;
+}
+.carouselButton {
+    cursor: pointer;
+}
+.carousel p {
+    text-align: center;
+}
+.darkCarousel p {
+    color: #F6F3E6;
+}
+
+@media only screen and (max-width: 1500px) {
+    .carousel {
+        width: 90%;
+        justify-content: center;
+    }
+    .carousel img {
+        width: 500px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .carousel {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .carousel img {
+        width: 300px;
+    }
+    .subtitle {
+        width: 300px;
+    }
+}

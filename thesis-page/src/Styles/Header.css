@@ -1,0 +1,47 @@
+.header {
+    background-color: #C21616;
+    display: flex;
+    align-items: center;
+}
+.darkHeader {
+    backGround-color: #1D1D1D;
+}
+.mode {
+    color: #F6F3E6;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-right: 2%;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.mode:hover {
+    color: #EEB414;
+}
+
+.seeblad {
+    width: 100px;
+    margin: 5%;
+}
+.dianora {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+@media only screen and (max-width: 900px) {
+    .header {
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .dianora {
+        margin-top: 20px;
+        max-width: 100%;
+
+    }
+    .seeblad {
+
+        order: 2;
+    }
+    .mode {
+        order: 3;
+    }
+}

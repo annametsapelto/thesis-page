@@ -1,0 +1,19 @@
+.main h1 {
+    text-align: center;
+}
+.main {
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 20%;
+    padding: 10px;
+}
+.darkMain {
+    color: #F6F3E6;
+}
+@media only screen and (max-width: 900px) {
+    .main {
+        width: 95%;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+}

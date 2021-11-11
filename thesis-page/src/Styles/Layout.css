@@ -1,0 +1,26 @@
+.lightBackground {
+    background-color: #F6F3E6;
+}
+.darkBackground {
+    background-color: #1D1D1D;
+}
+.mainFlex {
+    display: flex;
+}
+.secondFlex {
+    flex-direction: column;
+}
+@media only screen and (max-width: 900px) {
+    .first {
+        order: 1;
+    }
+    .second {
+        order: 2;
+    }
+    .last {
+        order: 3;
+    }
+    .mainFlex {
+        flex-direction: column;
+    }
+}
