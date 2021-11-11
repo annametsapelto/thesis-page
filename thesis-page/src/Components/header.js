@@ -6,7 +6,7 @@ import '../Styles/Header.css';
 const Header = (props) => {
 
     const mode = () => {
-        if(props.isLightmode) {
+        if(props.isLightMode) {
             return "Dark Mode";
         } else {
             return "Light Mode";

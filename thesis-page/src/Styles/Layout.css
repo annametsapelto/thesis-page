@@ -7,14 +7,20 @@
 .mainFlex {
     display: flex;
 }
-@media only screen and (max-width: 700px) {
-    .mainFlex :nth-child(0) {
+.secondFlex {
+    flex-direction: column;
+}
+@media only screen and (max-width: 900px) {
+    .first {
+        order: 1;
+    }
+    .second {
         order: 2;
+    }
+    .last {
+        order: 3;
     }
     .mainFlex {
         flex-direction: column;
     }
-}
-.secondFlex {
-    flex-direction: column;
 }

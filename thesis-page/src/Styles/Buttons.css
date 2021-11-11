@@ -1,22 +1,22 @@
 .button {
-    height: 100px;
-    width: 70px;
+    height: 90px;
+    width: 60px;
     background-color: #EEB414; 
     cursor: pointer;
-    top: 50%;
-    margin-top: 50px;
+    min-width: 70px;
 }
 .left {
     background-image: url(../Images/arrow-left.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 90%;
+    margin-right: 2px;
 
 }
 .right {
     background-image: url(../Images/arrow-right.png);
     background-repeat: no-repeat;
-    background-size: 100%;
-
+    background-size: 90%;
+    margin-left: 2px;
 }
 .dark {
     background-color: #F6F3E6;
@@ -26,4 +26,11 @@
 }
 .dark:hover {
     background-color: #EEB414;
+}
+@media only screen and (max-width: 1200px) {
+    .button{
+        width: 40px;
+        height: 60px;
+        min-width: 40px;
+    }
 }

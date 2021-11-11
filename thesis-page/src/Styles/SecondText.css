@@ -1,6 +1,6 @@
 .second {
-    float: left;
-    width: 25%;
+    margin-top: 30px;
+    width: 30%;
     margin-right: 30px;
     color: #F6F3E6;
     padding: 20px;
@@ -15,7 +15,7 @@
 .darkSecond {
     background-color: #072B25;
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 900px){
     .second {
         width: 100%;
         margin-bottom: 50px;
