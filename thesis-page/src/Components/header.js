@@ -5,10 +5,10 @@ import seeblad from '../Images/seeblad.png';
 const Header = (props) => {
 
     const mode = () => {
-        if(props.isLightmode) {
+        if(props.isLightMode) {
             return "Dark Mode";
         } else {
-            return "LightMode";
+            return "Light Mode";
         }
     }
     return(
