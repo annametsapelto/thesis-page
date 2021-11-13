@@ -1,6 +1,7 @@
 import React from 'react';
 import dianoras from '../Images/dianoras.png';
 import seeblad from '../Images/seeblad.png';
+import styles from '../Styles/Header.module.css';
 
 const Header = (props) => {
 
@@ -11,11 +12,13 @@ const Header = (props) => {
             return "Light Mode";
         }
     }
+    const isDark = !props.isLightMode ? styles.dark: "";
+    
     return(
-        <div>
-          <img src={seeblad} alt="A yellow leaf shape, a heraldic seebladt"/>
-          <img src={dianoras} alt="Decorative text saying Dianora's Page"/>
-          <p onClick={props.changeMode} isLightMode={props.isLightMode}>{mode()}</p>
+        <div className={`${styles.header} ${isDark}`}>
+          <img src={seeblad} alt="A yellow leaf shape, a heraldic seebladt" className={styles.seeblad}/>
+          <img src={dianoras} alt="Decorative text saying Dianora's Page" className={styles.dianora}/>
+          <p onClick={props.changeMode} isLightMode={props.isLightMode} className={styles.mode}>{mode()}</p>
         </div>
     );
 }
