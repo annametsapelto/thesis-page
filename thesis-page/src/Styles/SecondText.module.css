@@ -12,7 +12,7 @@
 .second p {
     padding-bottom: 30px;
 }
-.darkSecond {
+.dark {
     background-color: #072B25;
 }
 @media only screen and (max-width: 900px){

@@ -1,8 +1,10 @@
 import Ornaments from './Ornaments';
+import styles from '../Styles/SecondText.module.css';
 
 const SecondText = (props) => {
+    const isDark = !props.isLightMode ? styles.dark : "";
     return (
-        <div>
+        <div className={`${styles.second} ${isDark}`}>
             <h3>My Reenactment Eras</h3>
             <Ornaments isLightMode={props.isLightMode}/>
             <h5>The Viking Age (years 700-1100)</h5>

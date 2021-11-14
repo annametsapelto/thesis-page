@@ -1,8 +1,10 @@
 import Ornaments from "./Ornaments";
+import styles from '../Styles/ThirdText.module.css';
 
 const ThirdText = (props) => {
+    const isDark = !props.isLightMode ? styles.dark : "";
     return (
-        <div>
+        <div className={`${styles.third} ${isDark}`}>
             <Ornaments isLightMode={props.isLightMode} />
             <h3>SCA</h3>
             <p>The reenactment group SCA (Society for Creative Anachronism) is an international group for reenacting history pre year 1600. 

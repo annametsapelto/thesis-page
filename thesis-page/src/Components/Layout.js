@@ -6,6 +6,7 @@ import Maintext from './Maintext';
 import SecondText from './SecondText';
 import ThirdText from './ThirdText';
 import PictureCarousel from './PictureCarousel';
+import styles from '../Styles/Layout.module.css';
 
 const Layout = () => {
 
@@ -18,15 +19,27 @@ const Layout = () => {
           setLightMode(true);
       }
     }
+    const isDark = !lightMode ? styles.darkBackground: styles.lightBackground;
     return (
-        <>
-           <Header changeMode = {changeMode} isLightMode = {lightMode}/>
-           <Maintext isLightMode={lightMode}/>
-           <SecondText isLightMode={lightMode} />
-           <PictureCarousel isLightMode={lightMode} />
-           <ThirdText isLightMode={lightMode} />
-           <Footer isLightMode = {lightMode}/>
-        </>
+        <div className={isDark}>
+            <Header changeMode = {changeMode} isLightMode = {lightMode}/>
+            <div className={styles.mainFlex}>           
+                <div className={styles.second}>           
+                    <SecondText isLightMode={lightMode} />
+                </div>
+            <div className={styles.secondFlex}>            
+                <div className={styles.first}>           
+                    <Maintext isLightMode={lightMode}/>
+                </div>
+            <div className={styles.last}>           
+                <PictureCarousel isLightMode={lightMode} />
+                <ThirdText isLightMode={lightMode} />
+            </div>
+            </div>
+            </div>
+            <Footer isLightMode = {lightMode}/>
+            
+        </div>
     )
 }
 

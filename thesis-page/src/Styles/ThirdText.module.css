@@ -7,7 +7,7 @@
 .third h3 {
     text-align: center;
 }
-.darkThird {
+.dark {
     color: #F6F3E6;
 }
 @media only screen and (max-width: 900px) {
