@@ -23,22 +23,19 @@ const Layout = () => {
     return (
         <div className={isDark}>
             <Header changeMode = {changeMode} isLightMode = {lightMode}/>
-            <div className={styles.mainFlex}>           
-                <div className={styles.second}>           
-                    <SecondText isLightMode={lightMode} />
+            <div className={styles.mainFlex}>                      
+                <SecondText isLightMode={lightMode} className={styles.second} />
+                <div className={styles.secondFlex}>            
+                    <div className={styles.first}>           
+                        <Maintext isLightMode={lightMode}/>
+                        <PictureCarousel isLightMode={lightMode} />                    
+                    </div>
+                    <div className={styles.last}>           
+                        <ThirdText isLightMode={lightMode} />
+                    </div>
                 </div>
-            <div className={styles.secondFlex}>            
-                <div className={styles.first}>           
-                    <Maintext isLightMode={lightMode}/>
-                </div>
-            <div className={styles.last}>           
-                <PictureCarousel isLightMode={lightMode} />
-                <ThirdText isLightMode={lightMode} />
-            </div>
-            </div>
             </div>
             <Footer isLightMode = {lightMode}/>
-            
         </div>
     )
 }
