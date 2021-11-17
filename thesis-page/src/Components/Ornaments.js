@@ -14,7 +14,6 @@ const Ornaments = (props) => {
         <div>
             {ornaments()}
         </div>
-        
     )
 }
 export default Ornaments;
