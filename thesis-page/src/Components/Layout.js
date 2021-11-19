@@ -8,7 +8,6 @@ import ThirdText from './ThirdText';
 import PictureCarousel from './PictureCarousel';
 
 const Layout = () => {
-
     const [lightMode, setLightMode] = useState(true);
 
     const changeMode = () =>{
