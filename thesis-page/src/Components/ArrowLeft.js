@@ -23,7 +23,7 @@ const LeftButton = styled.button`
 
 const ArrowLeft = (props) => {
     return (
-        <LeftButton onClick={props.switchLeft}>        
+        <LeftButton onClick={props.switchLeft} isLightMode = {props.isLightMode}>        
         </LeftButton>
     )
 }

@@ -1,10 +1,28 @@
 import Ornaments from "./Ornaments";
+import styled from 'styled-components';
+
+const Third = styled.div`
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 20%;
+    padding: 10px;
+    color: ${props => props.isLightMode ? "#000000" : "#F6F3E6"}
+    @media only screen and (max-width: 900px) {
+        width: 95%;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+`
+const ThirdH3 = styled.h3`
+    text-align: center;
+` 
+
 
 const ThirdText = (props) => {
     return (
-        <div>
+        <Third isLightMode = {props.isLightMode}>
             <Ornaments isLightMode={props.isLightMode} />
-            <h3>SCA</h3>
+            <ThirdH3>SCA</ThirdH3>
             <p>The reenactment group SCA (Society for Creative Anachronism) is an international group for reenacting history pre year 1600. 
                 Here in Finland, we have determined that our period starts from the year 500 so we don’t reenact for example Antiquity. 
                 Nevertheless, we can have Viking warriors and Renaissance gentlefolk in the same events. </p>
@@ -16,7 +34,7 @@ const ThirdText = (props) => {
             <p>Being in the SCA means that our activities are very international. 
                 I have attended SCA events in Sweden and Germany and many friends of mine attend events abroad every year.</p>
             <Ornaments isLightMode={props.isLightMode} />
-        </div>
+        </Third>
     )
 }
 

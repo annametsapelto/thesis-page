@@ -1,9 +1,26 @@
 import Ornaments from "./Ornaments";
+import styled from 'styled-components';
+
+const Main = styled.div`
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 20%;
+    padding: 10px;
+    color: ${props => props.isLightMode ? "#000000" : "#F6F3E6"};
+    @media only screen and (max-width: 900px) {
+        width: 95%;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+`
+const MainTitle = styled.h1`
+    text-align: center;
+` 
 
 const Maintext = (props) => {
   return (
-      <div>
-          <h1>Historical Reenactment</h1>
+      <Main isLightMode = {props.isLightMode}>
+          <MainTitle>Historical Reenactment</MainTitle>
           <p>The goal of historical reenactment is to feel like living in some past era. Quite often we bypass some of the more gruesome 
               details like pestilence and poor hygiene even though many of us study also those less tractable facts. Historical 
               reenactment can be seen combining scientific research to a live role playing game.</p>
@@ -18,7 +35,7 @@ const Maintext = (props) => {
               I’ve been dressed in fancy garb in fairs and castles. I’ve also worked on the association side as the guide to new members and 
               currently as the web master.</p>
             <Ornaments isLightMode={props.isLightMode} />
-      </div>
+      </Main>
   )
 }
 
