@@ -8,9 +8,11 @@ import ThirdText from './ThirdText';
 import PictureCarousel from './PictureCarousel';
 import styled from 'styled-components';
 
+const BackGround = styled.div`
+    background-color: ${props => props.isLightMode ? "#F6F3E6" : "#1D1D1D"};
+`
 const MainFlex = styled.div`
     display: flex;
-    background-color: ${props => props.lightMode ? "#F6F3E6" : "#1D1D1D"}
     @media only screen and (max-width: 900px) {
         flex-direction: column;
     }
@@ -42,9 +44,9 @@ const Layout = () => {
       }
     }
     return (
-        <>
+        <BackGround isLightMode = {lightMode}>
            <Header changeMode = {changeMode} isLightMode = {lightMode}/>
-           <MainFlex lightMode = {lightMode}>                       
+           <MainFlex>                       
                <SecondText isLightMode={lightMode} />
                 <SecondFlex>
                 <FirstFlex>
@@ -57,7 +59,7 @@ const Layout = () => {
                 </SecondFlex>
                </MainFlex>
            <Footer isLightMode = {lightMode}/>
-        </>
+        </BackGround>
     )
 }
 

@@ -29,7 +29,7 @@ const CarouselImg = styled.img`
 
 const CarouselText = styled.p`
 text-align: center;
-color: ${props => props.isLightMode ? "#000000" : "#F6F3E6"}
+color: ${props => props.isLightMode ? "#000000" : "#F6F3E6"};
 @media only screen and (max-width: 700px) {
     width: 300px;
 }

@@ -6,7 +6,7 @@ const Third = styled.div`
     margin-left: 20px;
     margin-right: 20%;
     padding: 10px;
-    color: ${props => props.isLightMode ? "#000000" : "#F6F3E6"}
+    color: ${props => props.isLightMode ? "#000000" : "#F6F3E6"};
     @media only screen and (max-width: 900px) {
         width: 95%;
         margin-left: 10px;
