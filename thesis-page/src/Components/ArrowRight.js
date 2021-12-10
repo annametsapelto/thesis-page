@@ -2,7 +2,7 @@
 import { css, jsx } from '@emotion/react';
 import Arrow from '../Images/arrow-right.png';
 
-const ArrowRight = (props) => {
+const ArrowRight = ({isLightMode, switchRight}) => {
     const styles = ({isLightMode}) => css`
             height: 90px;
             width: 60px;
@@ -30,8 +30,8 @@ const ArrowRight = (props) => {
             }`
         
     return (
-        <button onClick={props.switchRight}
-            css={styles}
+        <button onClick={switchRight}
+            css={styles({isLightMode})}
         />
     )
 }

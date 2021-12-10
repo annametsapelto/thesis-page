@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react';
 import React from 'react';
 import {useState} from 'react';
 import Header from './Header';
@@ -9,6 +11,41 @@ import PictureCarousel from './PictureCarousel';
 
 const Layout = () => {
 
+    const back = ({lightMode}) => css`
+        background-color: #F6F3E6;
+        ${lightMode === false && `
+            background-color: #1D1D1D;
+        `}
+    `;
+
+    const mainFlex = css`
+        display: flex;
+        @media only screen and (max-width: 900px) {
+            flex-direction: column;
+        }
+        `
+            
+    const secondFlex =css`
+        flex-direction: column;
+    `
+    const first = css`
+        @media only screen and (max-width: 900px) {
+        order: 1;
+    }
+    `;
+    
+    const second = css`
+        @media only screen and (max-width: 900px) {
+            order: 2;
+        }
+    `
+
+    const last = css`
+        @media only screen and (max-width: 900px) {
+            order: 3;
+        }
+    `
+
     const [lightMode, setLightMode] = useState(true);
 
     const changeMode = () =>{
@@ -19,14 +56,24 @@ const Layout = () => {
       }
     }
     return (
-        <>
+        <div css={back({lightMode})}>
            <Header changeMode = {changeMode} isLightMode = {lightMode}/>
-           <Maintext isLightMode={lightMode}/>
-           <SecondText isLightMode={lightMode} />
-           <PictureCarousel isLightMode={lightMode} />
-           <ThirdText isLightMode={lightMode} />
+           <div css={mainFlex}>
+               <div css={second}>
+                   <SecondText isLightMode={lightMode} />
+                </div>           
+                <div css={secondFlex}> 
+                    <div css={first}>
+                        <Maintext isLightMode={lightMode}/>
+                    </div>              
+                    <div css={last}>
+                        <PictureCarousel isLightMode={lightMode} />
+                        <ThirdText isLightMode={lightMode} />
+                    </div>
+                </div>
+           </div>
            <Footer isLightMode = {lightMode}/>
-        </>
+        </div>
     )
 }
 
