@@ -1,9 +1,29 @@
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react';
 import Ornaments from "./Ornaments";
 
-const Maintext = (props) => {
+const Maintext = ({isLightMode}) => {
+    const mainTitle = css`
+        text-align: center;
+    `
+    const mainCss = ({isLightMode}) => css`
+        width: 50%;
+        margin-left: 20px;
+        margin-right: 20%;
+        padding: 10px;
+        ${isLightMode === false && `
+            color: #F6F3E6;
+        `}
+        @media only screen and (max-width: 900px) {
+            width: 95%;
+            margin-left: 10px;
+            margin-right: 20px;
+        }
+    `        
+
   return (
-      <div>
-          <h1>Historical Reenactment</h1>
+      <div css={mainCss({isLightMode})}>
+          <h1 css={mainTitle}>Historical Reenactment</h1>
           <p>The goal of historical reenactment is to feel like living in some past era. Quite often we bypass some of the more gruesome 
               details like pestilence and poor hygiene even though many of us study also those less tractable facts. Historical 
               reenactment can be seen combining scientific research to a live role playing game.</p>
@@ -17,7 +37,7 @@ const Maintext = (props) => {
               I’ve done SCA heavy combat and own a suit of armor for it. I’ve arranged a couple of events and cooked medieval feasts for participants. 
               I’ve been dressed in fancy garb in fairs and castles. I’ve also worked on the association side as the guide to new members and 
               currently as the web master.</p>
-            <Ornaments isLightMode={props.isLightMode} />
+            <Ornaments isLightMode={isLightMode} />
       </div>
   )
 }
