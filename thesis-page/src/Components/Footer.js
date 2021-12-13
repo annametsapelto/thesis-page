@@ -7,7 +7,7 @@ const Footer = ({isLightMode}) => {
         margin-top: 100px;
         font-size: smaller;
         text-align: center;
-        ${isLightMode === false && 
+        ${!isLightMode && 
         `
             color: #F6F3E6;
         `

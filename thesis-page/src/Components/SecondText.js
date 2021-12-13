@@ -10,7 +10,7 @@ const SecondText = ({isLightMode}) => {
         color: #F6F3E6;
         padding: 20px;
         background-color: #C21616;
-        ${isLightMode === false && `
+        ${!isLightMode && `
             background-color: #072B25;
         `}    
         @media only screen and (max-width: 900px){

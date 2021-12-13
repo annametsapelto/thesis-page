@@ -8,7 +8,7 @@ const ThirdText = ({isLightMode}) => {
         margin-left: 20px;
         margin-right: 20%;
         padding: 10px;
-        ${isLightMode === false && `
+        ${!isLightMode && `
             color: #F6F3E6;
         `}
         @media only screen and (max-width: 900px) {

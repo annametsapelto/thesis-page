@@ -8,7 +8,7 @@ const Header = ({isLightMode, changeMode}) => {
         background-color: #C21616;
         display: flex;
         align-items: center;
-        ${isLightMode === false && `
+        ${!isLightMode && `
             backGround-color: #1D1D1D;
         `}
     @media only screen and (max-width: 900px) {

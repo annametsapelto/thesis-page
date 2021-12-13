@@ -16,7 +16,7 @@ const ArrowRight = ({isLightMode, switchRight}) => {
             &:hover {
                 background-color: #F6F3E6;
             }
-            ${isLightMode === false &&
+            ${!isLightMode &&
                 `
                     background-color: #F6F3E6;
                     &:hover {

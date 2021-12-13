@@ -37,7 +37,7 @@ const PictureCarousel = ({isLightMode}) => {
     @media only screen and (max-width: 700px) {
             width: 300px;
         }
-    ${isLightMode === false && `
+    ${!isLightMode && `
         color: #F6F3E6;
     `}    
     ` 

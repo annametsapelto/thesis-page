@@ -13,7 +13,7 @@ const Layout = () => {
 
     const back = ({lightMode}) => css`
         background-color: #F6F3E6;
-        ${lightMode === false && `
+        ${!lightMode && `
             background-color: #1D1D1D;
         `}
     `;

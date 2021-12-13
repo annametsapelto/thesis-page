@@ -17,7 +17,7 @@ const styles = ({isLightMode}) => css`
             &:hover {
                 background-color: #F6F3E6;
             }
-            ${isLightMode === false &&
+            ${!isLightMode &&
             `
                 background-color: #F6F3E6;
                 &:hover {
